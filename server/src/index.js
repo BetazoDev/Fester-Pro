@@ -29,9 +29,6 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// TEMPORARY seed route - remove after use
-app.use('/api/seed', require('./routes/seed'));
-
 
 // Serve frontend in production
 if (process.env.NODE_ENV === 'production') {
